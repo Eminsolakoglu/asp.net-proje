@@ -15,4 +15,5 @@ namespace BusinessLayer.Abstract
 		List<Blog> GetList();
 		Blog GetByID(int id);
 	}
+	//test
 }
