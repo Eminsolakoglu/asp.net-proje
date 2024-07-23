@@ -140,3 +140,4 @@ C:\Users\PC\source\repos\CoreDemo\CoreDemo\obj\Debug\net8.0\refint\CoreDemo.dll
 C:\Users\PC\source\repos\CoreDemo\CoreDemo\obj\Debug\net8.0\CoreDemo.pdb
 C:\Users\PC\source\repos\CoreDemo\CoreDemo\obj\Debug\net8.0\CoreDemo.genruntimeconfig.cache
 C:\Users\PC\source\repos\CoreDemo\CoreDemo\obj\Debug\net8.0\ref\CoreDemo.dll
+C:\Users\PC\source\repos\CoreDemo\CoreDemo\obj\Debug\net8.0\CoreDemo.sourcelink.json
