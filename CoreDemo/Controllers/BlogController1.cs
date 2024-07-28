@@ -7,10 +7,10 @@ namespace CoreDemo.Controllers
 {
     public class BlogController1 : Controller
     {
-        private BlogManager bm = new BlogManager(new EfBlogRepository());
+         BlogManager bm = new BlogManager(new EfBlogRepository());
         public IActionResult Index()
         {
-            var values = bm.GetList();
+            var values = bm.GetBlogListWithCategory();
             return View(values);
         }
     }
