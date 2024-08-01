@@ -17,7 +17,11 @@ namespace CoreDemo.Controllers
         public PartialViewResult SubscribeMail(NewsLetter p)
         {
             p.MailStatus = true;
-            nm.AddsNewsLetter(p);
+
+			nm.AddsNewsLetter(p);
+			Response.Redirect("/BlogController1/Index/");
+
+			
             return PartialView();
         } 
     }
