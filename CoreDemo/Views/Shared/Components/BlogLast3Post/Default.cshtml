@@ -2,11 +2,9 @@
 @model List<Blog>
 
 <div class="tech-btm">
-    <h4>Yazarın Diğer Yazıları</h4>
-    @foreach (var item in Model)
-    {
-
-
+		<h3>Son Postlar</h3>
+		@foreach(var item in Model)
+				{
         <div class="blog-grids row mb-3">
             <div class="col-md-5 blog-grid-left">
                 <a href="/BlogController1/BlogReadAll/@item.BlogID">
@@ -15,8 +13,16 @@
             </div>
             <div class="col-md-7 blog-grid-right">
 
+             
                 <h5>
-                    <a href="/BlogController1/BlogReadAll/@item.BlogID">@item.BlogTitle </a>
+                    <a href="/BlogController1/BlogReadAll/@item.BlogID">
+                        @{
+                            var contentPreview = item.BlogContent.Length > 50
+                            ? item.BlogContent.Substring(0, item.BlogContent.Substring(0, 50).LastIndexOf(" "))
+                            : item.BlogContent;
+                        }
+                        @contentPreview ...
+                    </a>
                 </h5>
                 <div class="sub-meta">
                     <span>
@@ -27,5 +33,5 @@
             </div>
 
         </div>
-    }
+		}
 </div>
