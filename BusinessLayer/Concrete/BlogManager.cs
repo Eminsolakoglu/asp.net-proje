@@ -61,5 +61,20 @@ namespace BusinessLayer.Concrete
 		{
 			return _blogDal.GetListAll(x=> x.WriterID == id);
 		}
-	}
+
+        public void TAdd(Blog t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TDelete(Blog t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TUpdate(Blog t)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
