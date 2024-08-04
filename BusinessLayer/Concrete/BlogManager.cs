@@ -18,20 +18,7 @@ namespace BusinessLayer.Concrete
             _blogDal = blogDal;
         }
 
-        public void BlogAdd(Blog Blog)
-        {
-            _blogDal.Insert(Blog);
-        }
-
-        public void BlogDelete(Blog Blog)
-        {
-            _blogDal.Delete(Blog);
-        }
-
-        public void BlogUpdate(Blog Blog)
-        {
-            _blogDal.Update(Blog);
-        }
+     
 
         public List<Blog> GetBlogListWithCategory()
         {
@@ -64,7 +51,7 @@ namespace BusinessLayer.Concrete
 
         public void TAdd(Blog t)
         {
-            throw new NotImplementedException();
+            _blogDal.Insert(t);
         }
 
         public void TDelete(Blog t)
