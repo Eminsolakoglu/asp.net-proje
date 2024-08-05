@@ -15,6 +15,7 @@
         @Html.Label("BlogBaşlığı")
         @Html.TextBoxFor(x => x.BlogTitle, new { @class = "form-control" })
         <br />
+
         @Html.Label("Blog Görseli")
         @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
         <br />
@@ -22,12 +23,17 @@
         @Html.TextBoxFor(x => x.BlogThumbnailImage, new { @class = "form-control" })
         <br />
         @Html.Label("Kategori")
-        @Html.TextBoxFor(x => x.CategoryID, new { @class = "form-control" })
+    @Html.Label("Kategori")
+    @Html.DropDownListFor(x => x.CategoryID, (List<SelectListItem>)ViewBag.cv, new { @class = "form-control" })
     
         @Html.Label("Blog İçeriği")
         @Html.TextAreaFor(x => x.BlogContent, 15, 3, new { @class = "form-control" })
 
         <br />
+    @Html.HiddenFor(x => x.BlogID)
+    @Html.HiddenFor(x => x.BlogStatus)
+    @Html.HiddenFor(x => x.WriterID)
+    @Html.HiddenFor(x => x.BlogCreateDate)
 
     
         <button class="btn btn-success">Güncelle</button>
