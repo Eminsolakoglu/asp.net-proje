@@ -7,6 +7,8 @@ using EntityLayer.Concrete;
 using BusinessLayer.ValidationRules;
 using FluentValidation;
 using FluentValidation.Results;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Linq;
 
 namespace CoreDemo.Controllers
 {
@@ -34,6 +36,14 @@ namespace CoreDemo.Controllers
         [HttpGet]
         public IActionResult BlogAdd()
         {
+            CategoryManager cm = new CategoryManager(new EfCategoryRepository());
+            List<SelectListItem> categoryvalues = (from x in cm.GetList()
+                                                   select new SelectListItem
+                                                   {
+                                                       Text = x.CategoryName,
+                                                       Value = x.CategoryID.ToString()
+                                                   }).ToList();
+            ViewBag.cv= categoryvalues;
             return View();
         }
         [HttpPost]
