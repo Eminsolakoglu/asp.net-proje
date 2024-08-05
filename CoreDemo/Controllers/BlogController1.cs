@@ -76,6 +76,19 @@ namespace CoreDemo.Controllers
             return RedirectToAction("BlogListByWriter");
 
         }
+        [HttpGet]
+        public IActionResult EditBlog(int id)
+        {
+            var blogvalue = bm.TGetByID(id);
+           
+            return View(blogvalue);
+        }
+        [HttpPost]
+        public IActionResult EditBlog(Blog p)
+        {
+            return RedirectToAction("BlogListByWriter");
+        }
+
     }
         
 
